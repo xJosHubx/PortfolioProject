@@ -1,0 +1,79 @@
+/* General styles */
+body {
+    position: relative;
+    background: linear-gradient(to bottom, silver, black);
+    color: #f9ead1;
+    height: 100vh; /* Use viewport height */
+    width: 100vw; /* Use viewport width */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+*/
+
+/* Image styles */
+#pic1 {
+    position: absolute;
+    top: 50%; /* Use top instead of margin-top for positioning */
+    left: 50%; /* Add left for centering */
+    transform: translate(-50%, -50%); /* Center the image */
+    height: 15vh; /* Use viewport height */
+    width: 15vw; /* Use viewport width */
+}
+
+/* Button styles */
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-evenly;
+    height: 90vh; /* Use viewport height */
+    width: 20vw; /* Use viewport width */
+    margin-left: 10px;
+    gap: 100px;
+    width: 15vw; /* Use viewport width */
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    filter: blur(5px);
+}
+
+.nav-container .btn {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideIn 0.9s forwards ease-out, gradientTravel 1s linear infinite;
+    font-size: 20px;
+    border: 3px solid white;
+    border-radius: 3px; /* Apply border-radius to all buttons */
+    background: transparent;
+}
+
+/* Individual button styles */
+.nav-container .btn:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.nav-container .btn:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.nav-container .btn:nth-child(3) {
+    animation-delay: 0.9s;
+    color: gray;
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
